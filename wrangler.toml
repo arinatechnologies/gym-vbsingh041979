@@ -5,8 +5,7 @@ account_id = "YOUR_CLOUDFLARE_ACCOUNT_ID"
 workers_dev = true
 compatibility_date = "2024-07-01"
 
-main = "index.js"         # ✅ This tells Wrangler what to run
+main = "index.js"   # ✅ Required
 
 [site]
-bucket = "."              # ✅ HTML files are in the root
-entry-point = "."         # ✅ index.js is in the root
+bucket = "."        # ✅ Where your HTML files are
