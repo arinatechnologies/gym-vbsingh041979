@@ -2,20 +2,18 @@ name = "gym-vbsingh041979"
 account_id = "d12521e2e1b9c898650c952766c9b8e2"
 workers_dev = true
 compatibility_date = "2024-07-01"
-main = "index.js"
+main = "index.js"  # ✅ Only define ONE entry point (either `main` OR `site.entry-point`)
 
 [site]
-bucket = "."
+bucket = "."  # Directory containing static files (e.g., index.html)
+
+# KV namespace for Workers Sites (auto-generated)
+kv_namespaces = [
+  { binding = "__STATIC_CONTENT", id = "auto" }
+]
 
 [build.upload]
 format = "modules"
-
-[vars]
-__STATIC_CONTENT_MANIFEST = "__STATIC_CONTENT_MANIFEST"
-
-[[kv_namespaces]]
-binding = "__STATIC_CONTENT"
-id = "auto"
 
 [observability.logs]
 enabled = true
