@@ -1,8 +1,11 @@
 name = "gym-vbsingh041979"
 account_id = "d12521e2e1b9c898650c952766c9b8e2"
-compatibility_date = "2024-07-01"
 workers_dev = true
+compatibility_date = "2024-07-01"
 main = "index.js"
 
 [site]
-bucket = "."       # Static files are in repo root
+bucket = "."  # Serve static files from root
+
+[build.upload]
+format = "modules"
