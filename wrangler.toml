@@ -9,3 +9,7 @@ bucket = "."               # ✅ root directory contains index.html etc.
 
 [build.upload]
 format = "modules"         # ✅ required for using `import` and bindings
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = false
