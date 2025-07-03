@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install required dependencies
-        run: npm install @cloudflare/kv-asset-handler
-    
       - name: Checkout source code
         uses: actions/checkout@v3
 
