@@ -18,6 +18,11 @@ jobs:
         with:
           node-version: 22
 
+      - name: Initialize npm project
+        run: |
+          npm init -y
+          npm install @cloudflare/kv-asset-handler
+
       - name: Install Wrangler 4
         run: npm install -g wrangler@4
 
