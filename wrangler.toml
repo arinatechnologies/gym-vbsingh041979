@@ -1,7 +1,8 @@
 name = "gym-vbsingh041979"
 account_id = "d12521e2e1b9c898650c952766c9b8e2"
-workers_dev = true
 compatibility_date = "2024-07-01"
+workers_dev = true
+main = "index.js"
 
 [site]
-bucket = "."
+bucket = "."       # Static files are in repo root
