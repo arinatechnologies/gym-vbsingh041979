@@ -5,11 +5,17 @@ compatibility_date = "2024-07-01"
 main = "index.js"
 
 [site]
-bucket = "."               # ✅ root directory contains index.html etc.
+bucket = "."
 
 [build.upload]
-format = "modules"         # ✅ required for using `import` and bindings
+format = "modules"
 
-# wrangler.toml (wrangler v3.88.0^)
+[vars]
+__STATIC_CONTENT_MANIFEST = "__STATIC_CONTENT_MANIFEST"
+
+[[kv_namespaces]]
+binding = "__STATIC_CONTENT"
+id = "auto"
+
 [observability.logs]
-enabled = false
+enabled = true
